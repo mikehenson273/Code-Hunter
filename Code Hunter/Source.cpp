@@ -13,8 +13,8 @@ using namespace std;
 
 int main()
 {
-	system("title Code Hunter");
-	system("color 0A");
+	system("title Code Hunter"); //added title
+	system("color 0A"); //added coloration to initial text
 	string textToAnalyze;
 	//int foo = 0; //unnecessary
 	int vowels = 0;
@@ -70,12 +70,12 @@ int main()
 
 	if (checkSum == lengthOfStringSubmittedForAnalysis)
 	{
-		system("color 09");
+		system("color 09"); //should always be blue
 		cout << "This program self checking has found this Analysis to be valid." << endl;
 	}
 	else
 	{
-		system("color 0C");
+		system("color 0C"); //if improper edit was made turns red... SHOULD NEVER DO THIS!!!
 		cout << "WARNING! *** This program self checking has found this Analysis to be invalid! Do not use this data!" << endl;
 	}
 
