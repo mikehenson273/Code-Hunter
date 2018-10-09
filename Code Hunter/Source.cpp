@@ -70,6 +70,7 @@ int main()
 
 	if (checkSum == lengthOfStringSubmittedForAnalysis)
 	{
+		system("color 09");
 		cout << "This program self checking has found this Analysis to be valid." << endl;
 	}
 	else
