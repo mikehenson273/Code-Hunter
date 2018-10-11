@@ -6,6 +6,7 @@
 
 //#include "pch.h" // This line only needed for console C++ project, omit this for Empty C++ Project.
 #include <iostream>
+#include <Windows.h>
 #include <string>
 
 using namespace std;
@@ -14,7 +15,7 @@ using namespace std;
 int main()
 {
 	system("title Code Hunter"); //added title
-	system("color 0A"); //added coloration to initial text
+	system("color 02"); //added coloration to initial text
 	string textToAnalyze;
 	//int foo = 0; //unnecessary
 	int vowels = 0;
@@ -70,16 +71,18 @@ int main()
 
 	if (checkSum == lengthOfStringSubmittedForAnalysis)
 	{
-		system("color 09"); //should always be blue
-		cout << "This program self checking has found this Analysis to be valid." << endl;
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 3); //should always be blue
+		cout << "\n\nThis program self checking has found this Analysis to be valid." << endl;
 	}
 	else
 	{
-		system("color 0C"); //if improper edit was made turns red... SHOULD NEVER DO THIS!!!
-		cout << "WARNING! *** This program self checking has found this Analysis to be invalid! Do not use this data!" << endl;
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4); //if improper edit was made turns red... SHOULD NEVER DO THIS!!!
+		cout << "\n\nWARNING! *** This program self checking has found this Analysis to be invalid! Do not use this data!" << endl;
 	}
 
 	system("pause");
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2); //resets text back to green
 
 	return 0;
 }
